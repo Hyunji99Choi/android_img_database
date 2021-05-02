@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="text">
+            <requestFocus/>
+        </EditText>
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="영화이름"
+            android:textSize="23sp" />
+
+        <EditText
+            android:id="@+id/editTextYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/editTextName"
+            android:ems="10"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/Year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제작연도"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/Name"
+            android:textSize="23sp" />
+
+        <EditText
+            android:id="@+id/editTextDirector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/editTextYear"
+            android:ems="10"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/Director"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="감독"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/Year"
+            android:textSize="23sp" />
+
+        <EditText
+            android:id="@+id/editTextGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/editTextDirector"
+            android:ems="10"
+            android:inputType="text"/>
+        <TextView
+            android:id="@+id/Grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="평점"
+            android:layout_marginTop="45dp"
+            android:layout_below="@+id/Director"
+            android:textSize="23sp" />
+
+        <EditText
+            android:id="@+id/editTextCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/editTextGrade"
+            android:ems="10"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/Country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="국가"
+            android:layout_marginTop="45dp"
+            android:layout_below="@+id/Grade"
+            android:textSize="23sp" />
+
+        <EditText
+            android:id="@+id/editTextImgUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/editTextCountry"
+            android:ems="8"
+            android:enabled="false"/>
+        <Button
+            android:id="@+id/imgbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/editTextImgUrl"
+            android:text="이미지 등록"
+            android:onClick="movieImgButton"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/editTextCountry"
+            android:layout_marginLeft="10dp"/>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="25dp"
+            android:visibility="invisible"
+            android:layout_below="@+id/editTextImgUrl"/>
+
+        <TextView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이미지"
+            android:layout_marginTop="45dp"
+            android:layout_below="@+id/Country"
+            android:textSize="23sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:text="SAVE"
+            android:onClick="insert"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/save"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPDATE"
+            android:onClick="edit"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/update"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DELETE"
+            android:onClick="delete"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/imageView"
+            android:id="@+id/delete"/>
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
